@@ -1,2 +1,2 @@
 # Shopping-site
-a shooping website built using angular .
+a shoping website built using angular .
