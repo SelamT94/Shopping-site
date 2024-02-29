@@ -1,0 +1,19 @@
+.card {
+    width: 100%; /* Make the card take full width */
+    max-width: 400px; /* Set a maximum width for the card */
+    margin: 0 auto; /* Center the card horizontally */
+  }
+  
+  .list-group-item.font-weight-bold {
+    font-weight: bold;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .float-right {
+    margin-left: auto; /* Push content to the right within the flex item */
+  }

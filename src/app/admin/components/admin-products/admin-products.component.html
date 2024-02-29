@@ -1,0 +1,55 @@
+<p>
+  <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+</p>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Search by title </mat-label>
+        <input matInput (keyup)="applyFilter($event)"  placeholder="Search by title" >
+      </mat-form-field>
+
+           <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>
+        <mat-cell *matCellDef="let product"> {{product.title}} </mat-cell>
+      </ng-container>
+    
+<!-- Price Column -->
+<ng-container matColumnDef="price">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>
+    <mat-cell *matCellDef="let product"> {{product.price}} </mat-cell>
+  </ng-container>
+
+   <!-- Edit Column -->
+   <ng-container matColumnDef="edit">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>  </mat-header-cell>
+    <mat-cell *matCellDef="let product"> 
+        <a [routerLink]="['/admin/products/', product.id]">Edit</a>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+</mat-table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+
+<!-- <table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of filteredProducts ">
+      <td>{{ p.title }}</td>
+      <td>{{ p.price }}</td>
+      <td><a [routerLink]="['/admin/products/', p.id]">Edit</a></td>
+    </tr>
+  </tbody>
+</table> -->
+

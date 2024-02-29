@@ -1,0 +1,15 @@
+.indent{
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.thumbnail{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-size: cover;
+}
+.text-right {
+    text-align: right;
+    width: 150px; 
+    padding-right: 50px; 
+  }

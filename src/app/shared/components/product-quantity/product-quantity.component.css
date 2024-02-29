@@ -1,0 +1,29 @@
+.card {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .card-footer .btn {
+    width: 100%; /* Make the button take up the full width */
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-quantity {
+    width: 100%;
+    flex:1;
+    border-radius: 0;
+}
+
+.quantity-text {
+    text-align: center;
+    flex: 2;
+}
